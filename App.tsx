@@ -3,7 +3,7 @@ import Monster from './components/Monster';
 import InfoPanel from './components/InfoPanel';
 import { MONSTER_DATA } from './constants';
 import { PartId, HealedState } from './types';
-import { Info, Trophy, Sparkles, Code } from 'lucide-react';
+import { Info, Trophy, Sparkles, Code, Github, BookOpen } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activePart, setActivePart] = useState<PartId | null>(null);
@@ -66,12 +66,32 @@ const App: React.FC = () => {
               : "A Love Story. Play the mini-games to refactor the monster into a modern developer."}
           </p>
         </div>
-        <div className="hidden md:block text-right pointer-events-auto">
-            {!isAllHealed && (
-              <div className="inline-flex items-center gap-2 text-sm text-gray-500 border border-gray-800 rounded-full px-4 py-1">
-                 <Info size={16} /> Hover and click body parts
-              </div>
-            )}
+        <div className="flex flex-col items-end gap-3 pointer-events-auto">
+          <div className="flex items-center gap-2">
+            <a 
+              href="https://dev.to/suckup_de/legacy-codebase-a-love-story-21p3" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-monster-skin transition-colors border border-gray-800 hover:border-monster-skin rounded-full px-4 py-2"
+              title="Read the original blog post"
+            >
+              <BookOpen size={16} /> Blog Post
+            </a>
+            <a 
+              href="https://github.com/voku/LegacyPHP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-monster-skin transition-colors border border-gray-800 hover:border-monster-skin rounded-full px-4 py-2"
+              title="View on GitHub"
+            >
+              <Github size={16} /> GitHub
+            </a>
+          </div>
+          {!isAllHealed && (
+            <div className="hidden md:flex items-center gap-2 text-sm text-gray-500 border border-gray-800 rounded-full px-4 py-1">
+               <Info size={16} /> Hover and click body parts
+            </div>
+          )}
         </div>
       </header>
 
