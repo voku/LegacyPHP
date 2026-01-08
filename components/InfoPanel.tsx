@@ -724,9 +724,6 @@ const InfoPanel: React.FC<InfoPanelProps> = ({ data, onClose, isHealed, onHeal }
           )}
 
         </div>
-
-        {/* Footer decoration */}
-        <div className={`h-2 w-full transition-colors duration-500 ${isHealed ? 'bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700' : 'bg-gradient-to-r from-monster-skinDark via-monster-skin to-monster-skinDark'}`}></div>
       </div>
     </div>
   );
