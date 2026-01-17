@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #1a1a1a; }
+      .monster-color { fill: #8BC34A; }
+      .dark-color { fill: #558B2F; }
+      .eye-color { fill: #212121; }
+      .highlight { fill: #C6FF00; }
+      .text-title { fill: #e5e5e5; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 64px; }
+      .text-subtitle { fill: #a0a0a0; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 400; font-size: 32px; }
+      .text-tag { fill: #8BC34A; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 600; font-size: 24px; }
+      .code-bg { fill: #2d2d2d; }
+      .code-text { fill: #61AFEF; font-family: 'Courier New', monospace; font-size: 18px; }
+      .stitch { stroke: #212121; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1200" height="630"/>
+  
+  <!-- Left side - Monster illustration -->
+  <g transform="translate(150, 200)">
+    <!-- Monster Head -->
+    <ellipse cx="0" cy="0" rx="120" ry="140" class="monster-color"/>
+    
+    <!-- Stitches -->
+    <line x1="-60" y1="-80" x2="-40" y2="-80" class="stitch"/>
+    <line x1="40" y1="-80" x2="60" y2="-80" class="stitch"/>
+    <line x1="-90" y1="0" x2="-70" y2="0" class="stitch"/>
+    <line x1="70" y1="0" x2="90" y2="0" class="stitch"/>
+    <line x1="-30" y1="100" x2="-10" y2="100" class="stitch"/>
+    <line x1="10" y1="100" x2="30" y2="100" class="stitch"/>
+    
+    <!-- Eyes -->
+    <circle cx="-35" cy="-20" r="20" class="eye-color"/>
+    <circle cx="35" cy="-20" r="20" class="eye-color"/>
+    
+    <!-- Eye highlights -->
+    <circle cx="-28" cy="-25" r="7" class="highlight"/>
+    <circle cx="42" cy="-25" r="7" class="highlight"/>
+    
+    <!-- Mouth - zigzag -->
+    <path d="M -50 40 L -40 30 L -30 40 L -20 30 L -10 40 L 0 30 L 10 40 L 20 30 L 30 40 L 40 30 L 50 40" 
+          stroke="#212121" stroke-width="4" fill="none"/>
+    
+    <!-- Bolts on sides -->
+    <rect x="-130" y="-15" width="20" height="30" rx="3" class="dark-color"/>
+    <rect x="110" y="-15" width="20" height="30" rx="3" class="dark-color"/>
+    
+    <!-- Lightning bolts around monster -->
+    <path d="M -140 -120 L -120 -80 L -130 -80 L -110 -40" stroke="#C6FF00" stroke-width="5" fill="none" opacity="0.6"/>
+    <path d="M 140 -100 L 120 -60 L 130 -60 L 110 -20" stroke="#C6FF00" stroke-width="5" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Code snippet decoration -->
+  <rect x="340" y="480" width="820" height="110" rx="8" class="code-bg" opacity="0.6"/>
+  <text x="370" y="520" class="code-text">// Before: Legacy Spaghetti 🍝</text>
+  <text x="370" y="550" class="code-text" opacity="0.7">refactor(codebase).into(modern).php();</text>
+  <text x="370" y="580" class="code-text">// After: Clean Architecture ✨</text>
+  
+  <!-- Right side - Text content -->
+  <g transform="translate(380, 0)">
+    <!-- Tag/Badge -->
+    <rect x="0" y="80" width="200" height="40" rx="20" fill="#8BC34A" opacity="0.2"/>
+    <text x="100" y="108" text-anchor="middle" class="text-tag">🎮 Interactive</text>
+    
+    <!-- Title -->
+    <text x="0" y="180" class="text-title">Legacy PHP</text>
+    <text x="0" y="250" class="text-title">Codebase Monster</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="310" class="text-subtitle">Gamified visualization of refactoring</text>
+    <text x="0" y="350" class="text-subtitle">legacy code into modern PHP</text>
+    
+    <!-- Features as icons/text -->
+    <g transform="translate(0, 400)">
+      <circle cx="15" cy="-5" r="8" class="highlight"/>
+      <text x="35" y="0" class="text-tag">Click body parts to learn</text>
+    </g>
+    <g transform="translate(400, 400)">
+      <circle cx="15" cy="-5" r="8" class="highlight"/>
+      <text x="35" y="0" class="text-tag">Play mini-games</text>
+    </g>
+  </g>
+  
+  <!-- Footer/URL -->
+  <text x="600" y="610" text-anchor="middle" fill="#666" font-family="'Segoe UI', sans-serif" font-size="20">voku.github.io/LegacyPHP</text>
+</svg>
