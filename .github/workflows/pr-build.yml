@@ -30,3 +30,8 @@ jobs:
         run: npm run build
       - name: Verify output
         run: test -f dist/index.html
+      - name: Validate Pages artifact upload action
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./dist
